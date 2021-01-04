@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics">
+
+    <TextView
+        android:id="@+id/totalClients"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:text="ddddd"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/totalClients"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/monthlyGraph"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Monthly Graph"/>
+
+        <Button
+            android:id="@+id/weeklyGraph"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="Weekly Graph"/>
+
+
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_below="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="700dp" />
+
+
+
+</RelativeLayout>
